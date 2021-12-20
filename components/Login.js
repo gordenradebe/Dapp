@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
+import Header from "./Header";
+
 
 function Login() {
     const { authenticate, isAuthenticated, user } = useMoralis();
     return (
         <div className="bg-black relative text-white">
-            <h1>I am a Login Screen</h1>
+          
+            <Header/>
             <div className= "flex flex-col absolute z-50 h-4/5 w-full items-center justify-center space-y-6"> 
                 {/* image company logo */}
 

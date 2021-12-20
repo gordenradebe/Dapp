@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Login from '../components/Login'
 import { useMoralis } from "react-moralis";
+import Header from '../components/Header';
+
 
 
 export default function Home() {
@@ -9,16 +11,28 @@ export default function Home() {
   if (!isAuthenticated) return  <Login />
 
   return (
-    <div className="">
+    <div className="h-screen overflow-y-scroll bg-gradient-to-t
+     from-black to-slate-600 overflow-hidden">
       <Head>
         <title>Blockchain for Mining industry </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <div>
+
+  
+          <div className="max-w-screen-2xl mx-auto">
+                  {/* Header */}
+                  <Header/>
+                
+         
+          {/* card Top */}
+          {/* the detail card  */} 
+
+          </div>
+    
+      
+     
         <h1>Hi!,  Welcome {user.get("username")}</h1> 
         <button onClick = {() =>logout()}>Logout</button>
-        </div>
-         
 
     </div>
   )
